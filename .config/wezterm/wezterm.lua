@@ -50,7 +50,7 @@ config.font = wezterm.font({
 	family = "MonoLisaEser Nerd Font",
 })
 config.font_size = 14
-config.line_height = 1.12
+config.line_height = 0.9
 config.freetype_load_target = "Normal"
 
 -- window
