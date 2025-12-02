@@ -2,9 +2,10 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Configurations
-export BAT_THEME=OneHalfDark
+export BAT_THEME="OneHalfDark"
 export GREP_OPTIONS="--color=always"
 export CLI_COLOR=1
+export LSCOLORS="ExFxBxDxCxegedabagacad"
 
 # Additional PATHs
 export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
@@ -49,3 +50,12 @@ treeco() {
 
 # Additional init scripts
 eval "$(starship init zsh)"
+
+# Completions
+autoload -Uz compinit
+
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
